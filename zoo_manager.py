@@ -5,11 +5,11 @@ class Animal:
         self.species = species
 
     def speak(self):
-        return f'Animal makes this sound'
+        return f'Animal sound'
     
 class Mammal(Animal):
     def give_birth(self):
-        print(f'{self.name} has given birth')
+        print(f'{self.name} the {self.species} has given birth')
 
 class Bird(Animal):
     def __init__(self, name, species, wingspan):
@@ -18,15 +18,15 @@ class Bird(Animal):
 
 class Reptile(Animal):
     def bask_in_sun(self):
-        print(f'{self.name} is basking in the sun.')
+        print(f'{self.name} the {self.species} is basking in the sun.')
 
 class Primate(Mammal):
     def climb_trees(self):
-        print(f'{self.name} is climbing trees.')
+        print(f'{self.name} the {self.species} is climbing trees.')
 
 class Marsupial(Mammal):
     def carry_baby(self):
-        print(f"{self.name} is carrying it's baby.")
+        print(f"{self.name} the {self.species} is carrying it's baby.")
 
 class Aviary:
     def __init__(self, birds):
@@ -39,11 +39,14 @@ class ReptileEnclosure:
 toucanSam = Animal('sam', 'toucan')
 print(toucanSam.speak())
 
-snake = Reptile('diamond', 'rattlesnake')
-snake.bask_in_sun()
+mammal = Mammal("Giraffe", "Giraffa camelopardalis")
+mammal.give_birth()
 
-bird1 = Bird('birdie', 'cardinal', 4)
-print(bird1.name)
+# snake = Reptile('diamond', 'rattlesnake')
+# snake.bask_in_sun()
 
-enclosure1 = Aviary([bird1])
-print(enclosure1.birds[0].name)
+# bird1 = Bird('birdie', 'cardinal', 4)
+# print(bird1.name)
+
+# enclosure1 = Aviary([bird1])
+# print(enclosure1.birds[0].name)
