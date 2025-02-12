@@ -5,11 +5,11 @@ class Animal:
         self.species = species
 
     def speak(self):
-        return f'Animal sound'
+        return "Animal sound"
     
 class Mammal(Animal):
     def give_birth(self):
-        print(f'{self.name} the {self.species} has given birth')
+        return f"{self.name} the {self.species} has given birth"
 
 class Bird(Animal):
     def __init__(self, name, species, wingspan):
@@ -18,29 +18,43 @@ class Bird(Animal):
 
 class Reptile(Animal):
     def bask_in_sun(self):
-        print(f'{self.name} the {self.species} is basking in the sun.')
+        return f'{self.name} the {self.species} is basking in the sun'
 
 class Primate(Mammal):
     def climb_trees(self):
-        print(f'{self.name} the {self.species} is climbing trees.')
+        return f'{self.name} the {self.species} is climbing trees'
 
 class Marsupial(Mammal):
     def carry_baby(self):
-        print(f"{self.name} the {self.species} is carrying it's baby.")
+        return f"{self.name} the {self.species} is carrying its baby"
+
+# class Aviary:
+#     def __init__(self, birds):
+#         self.birds = birds #Bird() stores a list of bird instances
+
+# class ReptileEnclosure:
+#     def __init__(self, reptiles):
+#         self.reptiles = reptiles #Reptile() stores a list of reptile instances
 
 class Aviary:
-    def __init__(self, birds):
-        self.birds = birds #Bird() stores a list of bird instances
+    def __init__(self):
+        self.birds = []
+
+    def add(self, bird):
+        self.birds.append(bird)
 
 class ReptileEnclosure:
-    def __init__(self, reptiles):
-        self.reptiles = reptiles #Reptile() stores a list of reptile instances
+    def __init__(self):
+        self.reptiles = [] 
+    
+    def add(self, reptile):
+        self.birds.append(reptile)
         
-toucanSam = Animal('sam', 'toucan')
-print(toucanSam.speak())
+# toucanSam = Animal('sam', 'toucan')
+# print(toucanSam.speak())
 
-mammal = Mammal("Giraffe", "Giraffa camelopardalis")
-mammal.give_birth()
+# mammal = Mammal("Giraffe", "Giraffa camelopardalis")
+# mammal.give_birth()
 
 # snake = Reptile('diamond', 'rattlesnake')
 # snake.bask_in_sun()
