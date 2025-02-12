@@ -30,14 +30,20 @@ class Marsupial(Mammal):
 
 class Aviary:
     def __init__(self, birds):
-        self.birds = [] #Bird() # stores a list of bird instances
+        self.birds = birds #Bird() stores a list of bird instances
 
 class ReptileEnclosure:
     def __init__(self, reptiles):
-        self.reptiles = [] #Reptile() # stores a list of reptile instances
+        self.reptiles = reptiles #Reptile() stores a list of reptile instances
         
 toucanSam = Animal('sam', 'toucan')
 print(toucanSam.speak())
 
 snake = Reptile('diamond', 'rattlesnake')
 snake.bask_in_sun()
+
+bird1 = Bird('birdie', 'cardinal', 4)
+print(bird1.name)
+
+enclosure1 = Aviary([bird1])
+print(enclosure1.birds[0].name)
